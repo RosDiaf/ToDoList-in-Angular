@@ -4,7 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// -- Components
 import { FormComponent } from './form/form.component';
+import { ListComponent } from './list/list.component';
+
+// -- Shared
 import { SanitizerService } from './shared/sanitizer';
 import { AutofocusDirective } from './shared/directive/autofocus.directive';
 
@@ -12,7 +17,8 @@ import { AutofocusDirective } from './shared/directive/autofocus.directive';
   declarations: [
     AppComponent,
     FormComponent,
-    AutofocusDirective
+    AutofocusDirective,
+    ListComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'Todolist';
-  @Input() tasksArr: Array<string> = [];
+  tasksArr: Array<string> = [];
 
   showTasks(tasks) {
     this.tasksArr = tasks.slice(0);
-    console.log(this.tasksArr);
   }
 }

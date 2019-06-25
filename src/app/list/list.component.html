@@ -1,0 +1,7 @@
+
+<ol *ngIf="taskListArr" class="tasks">
+  <li *ngFor="let task of taskListArr; let i = index">
+    {{ task }} <button class="btn btn-dark" (click)="deleteTask()">Delete</button>
+  </li>
+</ol>
+

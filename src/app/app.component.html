@@ -1,11 +1,15 @@
-<div class="w3-container-fluid">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>{{ title }}</h1>
+    </div>  
+  </div>
   <div class="row">
     <div class="col-lg-4">
-        <h1>{{ title }}</h1>
         <app-form (showTasks)="showTasks($event)"></app-form>
     </div>
     <div class="col-lg-8">
-        list
+        <app-list [tasksArr]="tasksArr"></app-list>
     </div>
   </div>
 </div>
