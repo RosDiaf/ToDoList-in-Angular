@@ -1,7 +1,21 @@
-
-<ol *ngIf="taskListArr" class="tasks">
-  <li *ngFor="let task of taskListArr; let i = index">
-    {{ task }} <button class="btn btn-dark" (click)="deleteTask(i)">Delete</button>
-  </li>
-</ol>
-
+<table *ngIf="taskListArr.length" class="table tasks">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Task</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of taskListArr; let i = index">
+        <th scope="row">{{i}}</th>
+        <td>{{ task }}</td>
+        <td><button class="btn btn-danger" (click)="deleteTask(i)">Delete</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <button class="btn btn-secondary" (click)="sortTask()">Sort</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
