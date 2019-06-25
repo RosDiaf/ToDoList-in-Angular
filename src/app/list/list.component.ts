@@ -24,4 +24,9 @@ export class ListComponent implements OnInit, OnChanges {
     this.taskListArr = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
   }
 
+  deleteTask(index) {
+    this.taskListArr.splice(index, 1);
+    window.localStorage.setItem('items', JSON.stringify(this.taskListArr));
+  }
+
 }
