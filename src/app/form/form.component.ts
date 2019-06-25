@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SanitizerService } from '../shared/sanitizer';
 import { AutofocusDirective } from '../shared/directive/autofocus.directive';
@@ -13,6 +13,8 @@ export class FormComponent implements OnInit {
   listForm: FormGroup;
   tasksArr: Array<string> = [];
   @ViewChild('task') taskRef: ElementRef;
+  @Output() showTasks = new EventEmitter();
+
   constructor(private formBuilder: FormBuilder,
               private sanitizerService: SanitizerService,
               private el: ElementRef) { }
@@ -33,6 +35,7 @@ export class FormComponent implements OnInit {
       this.tasksArr.push(this.listForm.controls.task.value);
       this.listForm.reset();
       this.taskRef.nativeElement.focus();
+      this.showTasks.emit(this.tasksArr);
     }
   }
 
