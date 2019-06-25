@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { ListComponent } from './list.component';
+import { FormComponent } from './form.component';
 import { SanitizerService } from '../shared/sanitizer';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('FormComponent', () => {
+  let component: FormComponent;
+  let fixture: ComponentFixture<FormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListComponent ],
+      declarations: [ FormComponent ],
       imports: [ ReactiveFormsModule, FormsModule ],
       providers: [ SanitizerService ]
     })
@@ -18,7 +18,7 @@ describe('ListComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(FormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

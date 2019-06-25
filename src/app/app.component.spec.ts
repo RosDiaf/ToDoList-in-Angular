@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
+import { FormComponent } from './form/form.component';
 import { SanitizerService } from './shared/sanitizer';
 
 describe('AppComponent', () => {
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        ListComponent
+        FormComponent
       ],
       providers: [ SanitizerService ]
     }).compileComponents();
