@@ -1,4 +1,12 @@
 
-.error {
-    color: $fieldInvalid;
+.listForm {
+    .form-group {
+        background-color: $formGroupBgColor;
+        border: 1px solid $formGroupBorderColor;
+        padding: 10px;
+    }
+
+    .error {
+        color: $formFieldInvalid;
+    }
 }

@@ -1,4 +1,5 @@
-<table *ngIf="taskListArr.length" class="table tasks">
+<div *ngIf="taskListArr" class="tasks">
+  <table class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
@@ -19,3 +20,4 @@
       </tr>
     </tbody>
   </table>
+</div>

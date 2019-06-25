@@ -1,7 +1,7 @@
-<form [formGroup]="listForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="listForm" (ngSubmit)="onSubmit()" class="listForm">
   <div class="form-group">
-    <label>Task</label>
-    <input type="text" formControlName="task" class="form-control" autofocus #task />
+    <label for="task">Task</label>
+    <input type="text" formControlName="task" class="form-control" autofocus #task id="task"/>
     <div class="error" *ngIf="(!listForm.controls['task'].valid && listForm.controls['task'].touched)">Enter valid task</div>
   </div>
   <button class="btn btn-primary">Submit</button>
