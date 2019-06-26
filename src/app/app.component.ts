@@ -7,7 +7,6 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnChanges {
   title = 'Todolist';
-  // status: boolean;
   taskListArr = [];
 
   ngOnInit() {
