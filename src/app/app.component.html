@@ -6,10 +6,10 @@
   </div>
   <div class="row">
     <div class="col-lg-4">
-        <app-form (showTasks)="showTasks($event)"></app-form>
+        <app-form (showTasks)="showTasks()"></app-form>
     </div>
     <div class="col-lg-8">
-        <app-list [tasksArr]="tasksArr"></app-list>
+        <app-list [status]="status"></app-list>
     </div>
   </div>
 </div>

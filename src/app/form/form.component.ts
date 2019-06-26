@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
       this.sanitizeInputForm(this.listForm);
       this.tasksArr.push(this.listForm.controls.task.value);
       window.localStorage.setItem('items', JSON.stringify(this.tasksArr))
-      this.showTasks.emit(this.tasksArr);
+      this.showTasks.emit();
       this.listForm.reset();
       this.taskRef.nativeElement.focus();
     }

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class ListComponent implements OnInit, OnChanges {
 
-  @Input() tasksArr: Array<string> = [];
+  @Input() status: boolean;
   taskListArr = [];
 
   constructor() { }

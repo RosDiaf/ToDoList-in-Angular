@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Todolist';
-  tasksArr: Array<string> = [];
+  status: boolean;
 
-  showTasks(tasks) {
-    this.tasksArr = tasks.slice(0);
+  showTasks() {
+    this.status = !this.status;
   }
 }
