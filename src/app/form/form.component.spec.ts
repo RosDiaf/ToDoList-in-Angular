@@ -26,4 +26,21 @@ describe('FormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('Form', () => {
+    const TaskKey = 'task';
+    it('should submit the task when data is dalid', () => {
+      component.listForm.controls[TaskKey].setValue('task 1');
+      let spySanitizeField = spyOn(component, 'sanitizeInputForm');
+      component.onSubmit();
+      expect(spySanitizeField).toHaveBeenCalledWith(component.listForm);
+    });
+
+    it('should not submit the task when data is not dalid', () => {
+      component.listForm.controls[TaskKey].setValue('%££<>1&&&&');
+      let spySanitizeField = spyOn(component, 'sanitizeInputForm');
+      component.onSubmit();
+      expect(spySanitizeField).not.toHaveBeenCalledWith(component.listForm);
+    });
+  })
 });
